@@ -1,0 +1,142 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{mathptmx} % Times New Roman font
+\usepackage[margin=1in]{geometry} % Set page margins
+\usepackage{setspace} % Set line spacing
+\usepackage{color}
+
+\renewcommand{\familydefault}{\rmdefault} % Set default font to Times New Roman
+
+% Personal information
+\newcommand{\name}{Shan Gao}
+\newcommand{\address}{604 W 8th Ave, Mesa, AZ 85210}
+\newcommand{\phone}{(602) 693-6743}
+\newcommand{\email}{sgao52@asu.edu}
+\newcommand{\website}{https://github.com/sgao52}
+
+% Section formatting
+\usepackage{titlesec}
+% \titleformat{\section}{\large\bfseries}{\thesection}{1em}{}  % original one
+\titleformat{\section}{
+  \vspace{-12pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{3pt}]
+
+% Margin format
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Entry formatting
+\newcommand{\entry}[4]{\noindent\textbf{#1} \hfill #2\\ \textit{#3} \hfill #4 \vspace{7 pt}\\}
+\newcommand{\Rexp}[3]{\noindent\textbf{#1} \hfill #2\\ \textit{#3} \vspace{-9 pt}\\}
+\newcommand{\proj}[3]{\noindent\textbf{#1} \hfill #2\\ \hfill #3 \vspace{7 pt}\\}
+\newcommand{\conf}[2]{#1 \hfill #2 \vspace{7 pt}\\}
+\newcommand{\train}[4]{#1 \hfill #2\\ \emph{#3} \hfill #4 \vspace{7 pt}\\}
+
+%% Item formatting
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-6pt}}
+  }
+}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\pagestyle{empty} % remove page number
+% Document content
+\begin{document}
+
+% Heading
+\begin{center}
+    {\LARGE \textbf{\name}}\\
+    \vspace{0.2in}
+    \address\\
+    \vspace{0.05in}
+    \phone \ \textbullet \ \email \ \textbullet \ \website
+\end{center}
+
+% Education
+\section{Education}
+\entry{Geographic information Systems}{Arizona State University}{Master of Advanced Study}{2021--2022}
+\entry{Parks and Recreation Management}{Arizona State University}{Bachelor of Science}{2017--2021}
+\entry{Human Geography and Urban Planning}{Hainan University}{Bachelor of Science}{2017--2021}
+
+
+
+% Academic Course work
+\section{Academic Coursework}
+\begin{itemize}
+    \item Introduction to Geographic Information Systems (A)
+    \item Intermediate GIS (A)
+    \item Spatial Statistics (A)
+    \item Implementation in Corporate and Public Sectors (B)
+    \item GIS Project Presentation (B)
+    \item Programming the GIS Environment (A)
+    \item GIS Technologies (A+)
+    \item GIS for Business (A)
+    \item GIS for the Internet (A)
+\vspace{7pt}
+\end{itemize}
+
+
+% Research experience
+\section{Research Experience}
+\Rexp{Student Intern}{2021--2022}{Center for Global Discovery and Conservation Science}
+    \resumeItemListStart
+        \resumeItem{Data Processing}{Based on satellite imagery modify the Mangrove China 2018 data and created 849 polygons as
+        mangrove core areas for data verification.}
+        \resumeItem{Classification}{Use Random Forest Supervised Classification method to classify the Hainan Island mangrove forest
+        with Landsat 8 satellite imagery}
+        \resumeItem{ArcGIS Model}{Combine mangrove 2018 data and satellite imagery to recreate the general distribution of
+        mangrove with tool of reclassify, majority filter, and boundary clean tool}
+    \resumeItemListEnd
+\vspace{7pt}
+\Rexp{Student Assistant}{2020--2020}{China University of Geoscience}
+    \resumeItemListStart
+        \resumeItem{Information Collection \& Screen}{Research specific cases in Danxia mountain, Mogao Grottoes, The Grand Canyon, and Yellow Stone National Park in literature, comparing the legislation and motivation system between China and U.S. volunteering system.}
+        \resumeItem{Data Analyze Related to World Heritage}{Collect and analyze data related to World Heritage volunteer initiatives and provide a report to demonstrate growth opportunity of China World Heritage volunteer system.}
+    \resumeItemListEnd
+\vspace{7pt}
+% Skills
+\section{Skills}
+\begin{itemize}
+    \item Programming languages: Python, HTML, MATLAB, SQL, LaTeX, JavaScript
+    \item GIS/Remote Sensing software: ArcGIS, Metashape, Google Earth Engine, AutoCAD
+    \item Other Tools \& softwares: SQL Server Management Studio, Azure, Ubuntu, VOSviewer
+\end{itemize}
+
+% Projects
+\section{Projects}
+\proj{Capstone Project - Monitoring Central Arizona Lakes}{2022}{Created timelapse by Google Earth Engine from 2010 to 2021 and Palmer Drought Severity Index to find out the
+proper year to analyze. Classify Mormon Lake, Lynx Lake, and Watson Lake using ISO Cluster Unsupervised Classification, Support Vector Machine Supervised Classification, and U-Net Deep Learning Classification methods in ArcGIS. Compare different classification methods on accuracy level and visual effect level, and calculate the estimated time of processing.}
+\proj{Tempe Public Art Installation Project}{2021}{Propose several methods and data to find the potential art installation according to the core concept of economic
+equity, social equity, and racial equity. Reference the offenses analysis and land use data, locate three vacant areas in Tempe, and suggest building a landmark.Implement the geodatabase, well-designed maps, analysis, web app, presentation, and executive summary for the project.}
+\proj{Graduation Project - Monitoring Mangrove Change in Nature Reserve}{2021}{Classify the mangrove area in Dongzhaigang Nature Reserve, using Landsat 8 data from 2014 to 2020 on Google Earth Engine. Bring about NDVI \& mangrove area change curve from 2013 to 2020, also provides protection recommendations for local authority based on the mangrove shrinking fact and interview.}
+
+% Meetings&Conferences
+\section{Meetings \& Conferences}
+\conf{American Association of Geographer 2023 Annual Meeting}{2023}
+\conf{UAV Vegetation Remote Sensing Technology and Application Salon}{2023}
+\conf{The Colorado River at the Compact's Centennial}{2022}
+
+
+% Professional memberships
+\section{Professional Memberships}
+\conf{American Assiociation of Geographers}{2022 - Now}
+% Certifications and Training
+\section{Certifications \& Training}
+\train{Advanced Computing Techniques Training}{2023}{Arizona State University}{}
+\train{FAA Part 107 Remote Pilot Certificate}{2023-2025}{Federal Aviation Administration}{}
+\train{Beginner's Guide to Research Computing Training}{2022}{Arizona State University}{}
+\train{The Third Quantitative Remote Sensing Graduation Certificate}{2021}{Wuhan University}{}
+% Referees
+% \section{Referees}
+
+
+\end{document}
